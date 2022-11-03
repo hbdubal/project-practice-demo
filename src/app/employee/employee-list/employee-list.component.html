@@ -1,0 +1,31 @@
+<section>
+    <div class="container-fluid">
+        <div class="add-employee d-flex align-items-center justify-content-between">
+            <h4>Employee</h4>
+            <div class="add-icon">
+                <button class="bi bi-plus-circle border-0 bg-transparent fs-4" (click)="onAdd()"></button>
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <table class="table table-bordered" style="width: 100%;">
+                <thead>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>MobileNo</th>
+                    <th>Email</th>
+                    <th>Salary</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employeelist of employee">
+                        <td>{{employeelist.firstname}}</td>
+                        <td>{{employeelist.lastname}}</td>
+                        <td>{{employeelist.mobileno}}</td>
+                        <td>{{employeelist.email}}</td>
+                        <td>{{employeelist.salary}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

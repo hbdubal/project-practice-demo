@@ -1,0 +1,83 @@
+<section class="mt-3">
+    <div class="container-fluid">
+        <div class="form-info p-3 border border-1">
+            <div class="form-heading mb-4 text-info">
+                <h4>Register-Form</h4>
+            </div>
+
+            <form [formGroup]="empForm" (ngSubmit)="OnsubmitData()">
+                <div class="form-group mb-3">
+                    <label for="firstname">FirstName:</label>
+                    <input type="text" class="form-control rounded-0" id="firstname" required formControlName="firstname">
+                    <div
+                        *ngIf="empForm.get('firstname')?.invalid && (isSubmitted || empForm.get('firstname')?.touched || empForm.get('firstname')?.dirty)">
+                        <span class="text-danger" *ngIf="empForm.get('firstname')?.errors?.['required']">Please
+                            Enter FirstName*</span>
+                        <span class="text-danger" *ngIf="empForm.get('firstname')?.errors?.['minlength']">Name
+                            should be minimum 5 length char*</span>
+                        <span class="text-danger" *ngIf="empForm.get('firstname')?.errors?.['maxlength']">Name
+                            should be maximum 15 length char*</span>
+                        <span class="text-danger" *ngIf="empForm.get('firstname')?.errors?.['pattern']">Name
+                            should be in only char*</span>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="lastname">LastName:</label>
+                    <input type="text" class="form-control rounded-0" id="lastname" required formControlName="lastname">
+                    <div
+                        *ngIf="empForm.get('lastname')?.invalid && (isSubmitted || empForm.get('lastname')?.touched || empForm.get('lastname')?.dirty)">
+                        <span class="text-danger" *ngIf="empForm.get('lastname')?.errors?.['required']">Please
+                            Enter lastname*</span>
+                        <span class="text-danger" *ngIf="empForm.get('lastname')?.errors?.['minlength']">Name
+                            should be minimum 5 length char*</span>
+                        <span class="text-danger" *ngIf="empForm.get('lastname')?.errors?.['maxlength']">Name
+                            should be maximum 15 length char*</span>
+                        <span class="text-danger" *ngIf="empForm.get('lastname')?.errors?.['pattern']">Name
+                            should be in only char*</span>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="number">Mobile No.:</label>
+                    <input type="number" class="form-control rounded-0" required formControlName="mobileno">
+                    <div
+                        *ngIf="empForm.get('mobileno')?.invalid && (isSubmitted || empForm.get('mobileno')?.touched || empForm.get('mobileno')?.dirty)">
+                        <span class="text-danger" *ngIf="empForm.get('mobileno')?.errors?.['required']">Please
+                            Enter valid mobileno*</span>
+                        <span class="text-danger" *ngIf="empForm.get('mobileno')?.errors?.['pattern']">Name
+                            should be in only number*</span>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="email">Email:</label>
+                    <input type="text" class="form-control rounded-0" required formControlName="email">
+                    <div
+                        *ngIf="empForm.get('email')?.invalid && (isSubmitted || empForm.get('email')?.touched || empForm.get('email')?.dirty)">
+                        <span class="text-danger" *ngIf="empForm.get('email')?.errors?.['required']">Please
+                            Enter email*</span>
+                        <span class="text-danger" *ngIf="empForm.get('email')?.errors?.['pattern']">Please
+                            Enter Valid email*</span>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="salary">Salary:</label>
+                    <input type="text" class="form-control rounded-0" required formControlName="salary">
+                    <div
+                        *ngIf="empForm.get('salary')?.invalid && (isSubmitted || empForm.get('salary')?.touched || empForm.get('salary')?.dirty)">
+                        <span class="text-danger" *ngIf="empForm.get('salary')?.errors?.['required']">Please
+                            Enter valid salary*</span>
+                        <span class="text-danger" *ngIf="empForm.get('lastname')?.errors?.['pattern']">Name
+                            should be in only number*</span>
+                    </div>
+                </div>
+                <div class="reg_btn">
+                    <button type="submit" class="btn btn-primary me-4">Submit</button>
+                    <button type="button" class="btn btn-warning" (click)="onReset()">Cancle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

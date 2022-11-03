@@ -1,0 +1,11 @@
+nav {
+    background-color: #115366;
+    a {
+        cursor: pointer;
+        color: #ffffff;
+        &:hover{
+            color: #5bc0de;
+        }
+    }
+}
+

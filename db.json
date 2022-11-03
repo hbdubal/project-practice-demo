@@ -1,0 +1,44 @@
+{
+  "user": [
+    {
+      "firstname": "Hiral",
+      "lastname": "Dubal",
+      "mobileno": "8140157779",
+      "email": "hirrdubal11@gmail.com",
+      "salary": 80800,
+      "id": 1
+    },
+    {
+      "firstname": "Sheetal",
+      "lastname": "Patel",
+      "mobileno": "8140157890",
+      "email": "psheetal11@gmail.com",
+      "salary": 80900,
+      "id": 2
+    },
+    {
+      "firstname": "Kiran",
+      "lastname": "Gandhi",
+      "mobileno": "8140157690",
+      "email": "gkiran@gmail.com",
+      "salary": 80700,
+      "id": 3
+    },
+    {
+      "firstname": "Hem",
+      "lastname": "Chudgar",
+      "mobileno": "8142357890",
+      "email": "hem11@gmail.com",
+      "salary": 90800,
+      "id": 4
+    },
+    {
+      "firstname": "jinal",
+      "lastname": "tandel",
+      "mobileno": "7902357890",
+      "email": "gsfdfmg",
+      "salary": 80900,
+      "id": 5
+    }
+  ]
+}
