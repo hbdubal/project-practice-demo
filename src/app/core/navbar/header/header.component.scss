@@ -1,5 +1,9 @@
 nav {
     background-color: #115366;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 999;
     a {
         cursor: pointer;
         color: #ffffff;

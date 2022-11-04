@@ -1,0 +1,47 @@
+.signIn {
+    background: url(https://www.bootstrapdash.com/demo/login-templates-pro/login-9/assets/images/login-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    .login-page {
+        width: 40%;
+        margin: auto;
+
+        .form-group label {
+            color: #5bc0de;
+            font-size: 18px;
+            margin: 0 0px 10px 10px;
+        }
+
+        .form-control {
+            border: none;
+            padding: 19px 26px 18px;
+            border-radius: 30px;
+            height: 40px;
+            font-size: 14px;
+            &:focus
+            {
+                border: none;
+                box-shadow: none;
+            }
+        }
+
+        .loginbtn .btn {
+            padding: 15px 30px;
+            background-color: #115366;
+            border-radius: 27.5px;
+            font-size: 17px;
+            line-height: 20px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 29px;
+            &:hover
+            {
+                background-color: #5bc0de;
+                color: #ffffff;
+            }
+        }
+    }
+}

@@ -1,15 +1,7 @@
 {
   "user": [
     {
-      "firstname": "Hiral",
-      "lastname": "Dubal",
-      "mobileno": "8140157779",
-      "email": "hirrdubal11@gmail.com",
-      "salary": 80800,
-      "id": 1
-    },
-    {
-      "firstname": "Sheetal",
+      "firstname": "Sheetals",
       "lastname": "Patel",
       "mobileno": "8140157890",
       "email": "psheetal11@gmail.com",
@@ -17,7 +9,7 @@
       "id": 2
     },
     {
-      "firstname": "Kiran",
+      "firstname": "Kirann",
       "lastname": "Gandhi",
       "mobileno": "8140157690",
       "email": "gkiran@gmail.com",
@@ -39,6 +31,134 @@
       "email": "gsfdfmg",
       "salary": 80900,
       "id": 5
+    },
+    {
+      "firstname": "bipin",
+      "lastname": "dubal",
+      "mobileno": 8140123421,
+      "email": "bdubal@gmail.com",
+      "salary": "42525",
+      "id": 6
+    },
+    {
+      "firstname": "heena",
+      "lastname": "Dubal",
+      "mobileno": 7984169456,
+      "email": "hdubal@gmail.com",
+      "salary": "12365",
+      "id": 7
+    },
+    {
+      "firstname": "imesh",
+      "lastname": "Dubal",
+      "mobileno": "8140158879",
+      "email": "idubal11@gmail.com",
+      "salary": "78787",
+      "id": 8
+    },
+    {
+      "firstname": "prexa",
+      "lastname": "patel",
+      "mobileno": "7777157779",
+      "email": "ppatell11@gmail.com",
+      "salary": "80909",
+      "id": 9
+    },
+    {
+      "firstname": "Hiral",
+      "lastname": "Dubal",
+      "mobileno": "8140157779",
+      "email": "hirrdubal11@gmail.com",
+      "salary": "808090",
+      "id": 10
+    },
+    {
+      "firstname": "priyanka",
+      "lastname": "patel",
+      "mobileno": "8140158990",
+      "email": "ppatel11@gmail.com",
+      "salary": "11000",
+      "id": 11
+    },
+    {
+      "firstname": "vishvani",
+      "lastname": "patel",
+      "mobileno": "7878158990",
+      "email": "vpatel11@gmail.com",
+      "salary": "15000",
+      "id": 12
+    },
+    {
+      "firstname": "nishtha",
+      "lastname": "patel",
+      "mobileno": "8140778890",
+      "email": "npatel11@gmail.com",
+      "salary": "12000",
+      "id": 13
+    },
+    {
+      "firstname": "dixit",
+      "lastname": "patel",
+      "mobileno": "8989778890",
+      "email": "dpatel11@gmail.com",
+      "salary": "16000",
+      "id": 14
+    },
+    {
+      "firstname": "nikesh",
+      "lastname": "patel",
+      "mobileno": "8149090890",
+      "email": "nppatel11@gmail.com",
+      "salary": "14000",
+      "id": 15
+    },
+    {
+      "firstname": "yash",
+      "lastname": "dubal",
+      "mobileno": "8090778890",
+      "email": "ydubal11@gmail.com",
+      "salary": "16000",
+      "id": 16
+    },
+    {
+      "firstname": "charvi",
+      "lastname": "patel",
+      "mobileno": 7878909087,
+      "email": "cpatel@gmail.com",
+      "salary": "12345",
+      "id": 17
+    },
+    {
+      "firstname": "Sheetal",
+      "lastname": "Patel",
+      "mobileno": "8140178890",
+      "email": "psheetal@gmail.com",
+      "salary": 80700,
+      "id": 18
+    },
+    {
+      "firstname": "Kiran",
+      "lastname": "Gandhi",
+      "mobileno": "8140157890",
+      "email": "gkiran11@gmail.com",
+      "salary": 70700,
+      "id": 19
+    },
+    {
+      "firstname": "ravi",
+      "lastname": "singh",
+      "mobileno": "9040157890",
+      "email": "rsingh11@gmail.com",
+      "salary": 40700,
+      "id": 20
+    },
+    {
+      "firstname": "nikunj",
+      "lastname": "patel",
+      "mobileno": "8030157890",
+      "email": "npatel@gmail.com",
+      "salary": 10700,
+      "id": 21
     }
   ]
 }

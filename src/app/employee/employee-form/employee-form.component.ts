@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { map, mergeMap, Observable } from 'rxjs';
 import { Employee } from '../employee.model';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-employee-form',
@@ -12,6 +14,7 @@ export class EmployeeFormComponent implements OnInit {
   public empForm: FormGroup;
   public isSubmitted: boolean = false;
   public employee: Employee[] = [];
+  public id: any;
   // public combinedValue!:Observable<any>;
   // private firstname!: FormControl;
   // private lastname!: FormControl;
@@ -19,7 +22,17 @@ export class EmployeeFormComponent implements OnInit {
    * 
    * @param fb 
    */
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, public employeeService: EmployeeService, private router: Router, private activatedRoute: ActivatedRoute) {
+    this.activatedRoute.params.subscribe((params) => {
+      this.id = params['id'];
+      console.log(this.id);
+
+      if (this.id) {
+        this.getCompanybyId();
+      }
+    })
+    this.employee = [];
+
     this.empForm = this.fb.group(
       {
         firstname: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(15), Validators.pattern('[a-zA-Z]*')]],
@@ -37,25 +50,42 @@ export class EmployeeFormComponent implements OnInit {
   OnsubmitData() {
     this.isSubmitted = true;
     if (this.empForm.valid) {
-      this.employee.push(this.empForm.value);
-      console.log(this.employee);
+      if (this.id) {
+        this.updateData();
+      }
+      else {
+        this.employeeService.createData(this.empForm.value).subscribe((res) => {
+          this.router.navigate(['employee']);
+        })
+      }
     }
   }
 
   /**
-     *  Onclick Reset button
-     */
+   *  Onclick Reset button
+   */
   onReset() {
     this.empForm.reset();
   }
 
-  ngOnInit(): void {
-
-  //  this.combinedValue = this.firstname.valueChanges.pipe(mergeMap(s1=>
-  //   {
-  //     return this.lastname.valueChanges.pipe(map(s2 => s1 + '' + s2));
-  //   })) 
+  /**
+   * Update Data on Click
+   */
+  updateData() {
+    this.employeeService.EditData(this.empForm.value, this.id).subscribe((res) => {
+      this.router.navigate(['employee']);
+    })
   }
 
+  /**
+   * Getby id method
+   */
+  getCompanybyId() {
+    this.employeeService.getDataById(this.id).subscribe((data) => {
+      this.empForm.patchValue(data);
+    })
+  }
 
+  ngOnInit(): void {
+  }
 }

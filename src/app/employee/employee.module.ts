@@ -8,7 +8,8 @@ import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EmployeeService } from './employee.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import {OverlayModule} from '@angular/cdk/overlay';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     EmployeeRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    InfiniteScrollModule,
+    OverlayModule
   ],
   providers:[EmployeeService]
 })

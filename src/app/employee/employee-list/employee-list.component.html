@@ -1,31 +1,40 @@
 <section>
     <div class="container-fluid">
+        <!-- Start:Add Employee Button -->
         <div class="add-employee d-flex align-items-center justify-content-between">
             <h4>Employee</h4>
             <div class="add-icon">
                 <button class="bi bi-plus-circle border-0 bg-transparent fs-4" (click)="onAdd()"></button>
             </div>
         </div>
+        <!-- End:Add Employee Button -->
 
+        <!-- Start:Table DataList -->
         <div class="mt-3">
             <table class="table table-bordered" style="width: 100%;">
-                <thead>
+                <thead class="border">
                     <th>FirstName</th>
                     <th>LastName</th>
                     <th>MobileNo</th>
                     <th>Email</th>
                     <th>Salary</th>
+                    <th>Action</th>
                 </thead>
                 <tbody>
+                    <!-- <div class="search-results" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()"> </div>       -->
                     <tr *ngFor="let employeelist of employee">
                         <td>{{employeelist.firstname}}</td>
                         <td>{{employeelist.lastname}}</td>
                         <td>{{employeelist.mobileno}}</td>
                         <td>{{employeelist.email}}</td>
                         <td>{{employeelist.salary}}</td>
+                        <td><button class="btn btn-info me-4" (click)="OnEditData(employeelist.id)">Edit</button>
+                            <button class="btn btn-warning" (click)="onDeleteData(employeelist.id)">Delete</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <!-- End:Table DataList -->
     </div>
 </section>

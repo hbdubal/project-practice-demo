@@ -5,6 +5,7 @@
                 <h4>Register-Form</h4>
             </div>
 
+            <!-- Start:Form -->
             <form [formGroup]="empForm" (ngSubmit)="OnsubmitData()">
                 <div class="form-group mb-3">
                     <label for="firstname">FirstName:</label>
@@ -78,6 +79,7 @@
                     <button type="button" class="btn btn-warning" (click)="onReset()">Cancle</button>
                 </div>
             </form>
+            <!-- End:Form -->
         </div>
     </div>
 </section>
