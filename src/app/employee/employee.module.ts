@@ -10,6 +10,7 @@ import { EmployeeService } from './employee.service';
 import { HttpClientModule } from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import {OverlayModule} from '@angular/cdk/overlay';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -23,8 +24,10 @@ import {OverlayModule} from '@angular/cdk/overlay';
     ReactiveFormsModule,
     HttpClientModule,
     InfiniteScrollModule,
-    OverlayModule
+    OverlayModule,
+    SharedModule
   ],
   providers:[EmployeeService]
 })
 export class EmployeeModule { }
+  

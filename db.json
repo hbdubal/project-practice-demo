@@ -25,14 +25,6 @@
       "id": 4
     },
     {
-      "firstname": "jinal",
-      "lastname": "tandel",
-      "mobileno": "7902357890",
-      "email": "gsfdfmg",
-      "salary": 80900,
-      "id": 5
-    },
-    {
       "firstname": "bipin",
       "lastname": "dubal",
       "mobileno": 8140123421,
@@ -159,6 +151,22 @@
       "email": "npatel@gmail.com",
       "salary": 10700,
       "id": 21
+    },
+    {
+      "firstname": "shish",
+      "lastname": "brahmbhatt",
+      "mobileno": 7090876756,
+      "email": "sbhatt@gmail.com",
+      "salary": "123456",
+      "id": 22
+    },
+    {
+      "firstname": "jinal",
+      "lastname": "tandel",
+      "mobileno": 7878909889,
+      "email": "jtandel@gmail.com",
+      "salary": "67890",
+      "id": 23
     }
   ]
 }

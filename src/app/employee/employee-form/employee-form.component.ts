@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map, mergeMap, Observable } from 'rxjs';
+import { OverlayService } from 'src/app/shared/overlay.service';
 import { Employee } from '../employee.model';
 import { EmployeeService } from '../employee.service';
 
@@ -11,6 +12,7 @@ import { EmployeeService } from '../employee.service';
   styleUrls: ['./employee-form.component.scss']
 })
 export class EmployeeFormComponent implements OnInit {
+  @HostBinding('class') classes = 'w-100';
   public empForm: FormGroup;
   public isSubmitted: boolean = false;
   public employee: Employee[] = [];
@@ -22,7 +24,7 @@ export class EmployeeFormComponent implements OnInit {
    * 
    * @param fb 
    */
-  constructor(private fb: FormBuilder, public employeeService: EmployeeService, private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private fb: FormBuilder, public employeeService: EmployeeService, private router: Router, private activatedRoute: ActivatedRoute,private overlayService:OverlayService) {
     this.activatedRoute.params.subscribe((params) => {
       this.id = params['id'];
       console.log(this.id);
@@ -88,4 +90,5 @@ export class EmployeeFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
+ 
 }

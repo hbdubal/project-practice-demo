@@ -2,6 +2,8 @@ import { Overlay } from '@angular/cdk/overlay';
 import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { OverlayService } from 'src/app/shared/overlay.service';
+import { EmployeeFormComponent } from '../employee-form/employee-form.component';
 import { EmployeeService } from '../employee.service';
 
 @Component({
@@ -16,7 +18,7 @@ export class EmployeeListComponent implements OnInit {
   notEmptyPost = true;
   notscrolly = true;
 
-  constructor(private employeeService: EmployeeService, private router: Router, private activatedRouter: ActivatedRoute, private http: HttpClient,private overlay: Overlay) {
+  constructor(private employeeService: EmployeeService, private router: Router, private activatedRouter: ActivatedRoute, private http: HttpClient, private overlayService: OverlayService) {
     this.empDataPatch = new EventEmitter();
     this.employee = [];
   }
@@ -55,8 +57,8 @@ export class EmployeeListComponent implements OnInit {
    * @param employee 
    */
   OnEditData(employee: any) {
-    this.router.navigate(['employee/edit', employee])
     this.empDataPatch.emit(employee);
+    this.overlayService.openDialog(EmployeeFormComponent)
   }
 
   /**
@@ -69,7 +71,6 @@ export class EmployeeListComponent implements OnInit {
       this.employeeService.deleteData(id).subscribe(() => {
         this.getEmployeeData();
       });
-      this.router.navigate(['employee/add']);
     }
   }
 
@@ -77,7 +78,7 @@ export class EmployeeListComponent implements OnInit {
    * Add form on button click
    */
   onAdd() {
-    this.router.navigateByUrl('employee/add');
+    this.overlayService.openDialog(EmployeeFormComponent)
   }
 
 }

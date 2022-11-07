@@ -5,5 +5,8 @@ export class Employee
     mobileno?:number;
     email?:string;
     salary?:number;
+    country?:string;
+    city?:string;
+    state?:string;
     id!:number;
 }
