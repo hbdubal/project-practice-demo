@@ -22,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     LoginComponent,
     RegisterComponent
-  ]
+  ],
+ 
 })
 export class CoreModule { }
